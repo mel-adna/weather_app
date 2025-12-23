@@ -71,12 +71,9 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
     ```
 
 3.  **Configure API Key**:
-    Open `lib/core/constants/constants.dart` and replace the placeholder with your key:
-    ```dart
-    class Constants {
-      static const String baseUrl = '[https://api.openweathermap.org/data/2.5](https://api.openweathermap.org/data/2.5)';
-      static const String apiKey = 'YOUR_API_KEY_HERE'; // <--- Paste key here
-    }
+    Create a `.env` file in the root directory (same level as `pubspec.yaml`) and add your API key:
+    ```
+    OPENWEATHER_API_KEY=your_api_key_here
     ```
 
 4.  **Run the app**:
