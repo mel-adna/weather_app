@@ -82,7 +82,10 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
 
 | Home Screen | Forecast | Settings |
 |:---:|:---:|:---:|
-| ![Home](https://via.placeholder.com/300x600/00f2fe/ffffff?text=Home+Screen) | ![Forecast](https://via.placeholder.com/300x600/4facfe/ffffff?text=Forecast) | ![Settings](https://via.placeholder.com/300x600/000000/ffffff?text=Settings) |
+| ![Home](<img width="387" height="842" alt="Screenshot 2025-12-23 220718" src="https://github.com/user-attachments/assets/1bc9b68c-9ff9-438e-b47e-7a924af567a6" />
+) | ![Forecast](<img width="390" height="846" alt="Screenshot 2025-12-23 220807" src="https://github.com/user-attachments/assets/ab5b289f-46d2-4d9a-8111-224080c7c693" />
+) | ![Settings](<img width="389" height="845" alt="Screenshot 2025-12-23 220736" src="https://github.com/user-attachments/assets/bb3bbd17-c93a-4682-9211-8559ed507b15" />
+) |
 
 ## Testing
 
