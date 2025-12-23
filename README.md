@@ -1,8 +1,14 @@
-# Flutter Weather App
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7c318d81-0987-4c0b-a0f8-304c191abbb1" height="120" alt="App Icon" />
 
-A modern, beautiful, and robust weather application built with **Flutter**, utilizing **Clean Architecture** and **Riverpod** for state management. This app features a stunning **Glassmorphism** design, dynamic gradients, and real-time weather data from the OpenWeatherMap API.
+  # Flutter Weather App
 
-![App Banner](https://via.placeholder.com/1200x600/4facfe/ffffff?text=Weather+App+Banner)
+  <p>
+    A modern, beautiful, and robust weather application built with <strong>Flutter</strong>, utilizing <strong>Clean Architecture</strong> and <strong>Riverpod</strong> for state management. This app features a stunning <strong>Glassmorphism</strong> design, dynamic gradients, and real-time weather data from the OpenWeatherMap API.
+  </p>
+</div>
+
+---
 
 ## Features
 
@@ -30,19 +36,19 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
 ### Architecture Layers
 
 1.  **Domain Layer (Inner Circle)**:
-    *   **Entities**: Core business objects (e.g., `Weather`).
-    *   **Repositories (Interfaces)**: Contracts for data retrieval.
-    *   **Use Cases**: Application-specific business rules.
+    * **Entities**: Core business objects (e.g., `Weather`).
+    * **Repositories (Interfaces)**: Contracts for data retrieval.
+    * **Use Cases**: Application-specific business rules.
 
 2.  **Data Layer**:
-    *   **Models**: DTOs (Data Transfer Objects) with JSON parsing logic.
-    *   **Data Sources**: Remote (API) and local data fetching implementations.
-    *   **Repositories (Implementation)**: Implementation of domain interfaces.
+    * **Models**: DTOs (Data Transfer Objects) with JSON parsing logic.
+    * **Data Sources**: Remote (API) and local data fetching implementations.
+    * **Repositories (Implementation)**: Implementation of domain interfaces.
 
 3.  **Presentation Layer**:
-    *   **Providers**: Riverpod notifiers (`WeatherNotifier`, `SettingsNotifier`).
-    *   **Pages**: UI screens (`HomePage`, `SettingsPage`).
-    *   **Widgets**: Reusable UI components (`GlassContainer`).
+    * **Providers**: Riverpod notifiers (`WeatherNotifier`, `SettingsNotifier`).
+    * **Pages**: UI screens (`HomePage`, `SettingsPage`).
+    * **Widgets**: Reusable UI components (`GlassContainer`).
 
 ## Getting Started
 
@@ -55,7 +61,7 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/mel-adna/weather_app.git
+    git clone [https://github.com/mel-adna/weather_app.git](https://github.com/mel-adna/weather_app.git)
     cd weather_app
     ```
 
@@ -68,7 +74,7 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
     Open `lib/core/constants/constants.dart` and replace the placeholder with your key:
     ```dart
     class Constants {
-      static const String baseUrl = 'https://api.openweathermap.org/data/2.5';
+      static const String baseUrl = '[https://api.openweathermap.org/data/2.5](https://api.openweathermap.org/data/2.5)';
       static const String apiKey = 'YOUR_API_KEY_HERE'; // <--- Paste key here
     }
     ```
@@ -82,10 +88,7 @@ This project strictly follows **Clean Architecture** principles to ensure scalab
 
 | Home Screen | Forecast | Settings |
 |:---:|:---:|:---:|
-| ![Home](<img width="387" height="842" alt="Screenshot 2025-12-23 220718" src="https://github.com/user-attachments/assets/1bc9b68c-9ff9-438e-b47e-7a924af567a6" />
-) | ![Forecast](<img width="390" height="846" alt="Screenshot 2025-12-23 220807" src="https://github.com/user-attachments/assets/ab5b289f-46d2-4d9a-8111-224080c7c693" />
-) | ![Settings](<img width="389" height="845" alt="Screenshot 2025-12-23 220736" src="https://github.com/user-attachments/assets/bb3bbd17-c93a-4682-9211-8559ed507b15" />
-) |
+| <img src="https://github.com/user-attachments/assets/1bc9b68c-9ff9-438e-b47e-7a924af567a6" width="250" /> | <img src="https://github.com/user-attachments/assets/ab5b289f-46d2-4d9a-8111-224080c7c693" width="250" /> | <img src="https://github.com/user-attachments/assets/bb3bbd17-c93a-4682-9211-8559ed507b15" width="250" /> |
 
 ## Testing
 
@@ -93,8 +96,3 @@ Run the included unit and widget tests:
 
 ```bash
 flutter test
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
