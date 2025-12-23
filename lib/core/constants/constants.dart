@@ -1,4 +1,6 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class Constants {
   static const String baseUrl = 'https://api.openweathermap.org/data/2.5';
-  static const String apiKey = '6bcbb34940bc60490b3da9644dd0aca4';
+  static String get apiKey => dotenv.env['OPENWEATHER_API_KEY'] ?? '';
 }
