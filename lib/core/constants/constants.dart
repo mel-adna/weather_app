@@ -1,5 +1,4 @@
 class Constants {
   static const String baseUrl = 'https://api.openweathermap.org/data/2.5';
-  static const String apiKey =
-      'REPLACE_WITH_YOUR_API_KEY'; // TODO: User needs to provide this or I use a demo key
+  static const String apiKey = '6bcbb34940bc60490b3da9644dd0aca4';
 }

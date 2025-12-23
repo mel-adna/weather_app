@@ -43,7 +43,9 @@ class WeatherRepositoryImpl implements WeatherRepository {
       }
 
       Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
+        locationSettings: const LocationSettings(
+          accuracy: LocationAccuracy.high,
+        ),
       );
       final result = await remoteDataSource.getWeatherByCoordinates(
         position.latitude,

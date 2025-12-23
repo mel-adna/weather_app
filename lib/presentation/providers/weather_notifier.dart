@@ -1,23 +1,21 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/usecases/usecase.dart';
-import '../../domain/usecases/get_current_location_weather.dart';
 import '../../domain/usecases/get_current_weather.dart';
 import '../../domain/usecases/get_forecast.dart';
+import 'providers.dart';
 import 'weather_state.dart';
 
-class WeatherNotifier extends StateNotifier<WeatherState> {
-  final GetCurrentWeather getCurrentWeather;
-  final GetForecast getForecast;
-  final GetCurrentLocationWeather getCurrentLocationWeather;
-
-  WeatherNotifier({
-    required this.getCurrentWeather,
-    required this.getForecast,
-    required this.getCurrentLocationWeather,
-  }) : super(const WeatherState());
+class WeatherNotifier extends Notifier<WeatherState> {
+  @override
+  WeatherState build() {
+    return const WeatherState();
+  }
 
   Future<void> loadWeather(String cityName) async {
     state = state.copyWith(status: WeatherStatus.loading);
+
+    final getCurrentWeather = ref.read(getCurrentWeatherUseCaseProvider);
+    final getForecast = ref.read(getForecastUseCaseProvider);
 
     final weatherResult = await getCurrentWeather(
       GetCurrentWeatherParams(cityName: cityName),
@@ -50,6 +48,9 @@ class WeatherNotifier extends StateNotifier<WeatherState> {
   Future<void> loadCurrentLocationWeather() async {
     state = state.copyWith(status: WeatherStatus.loading);
 
+    final getCurrentLocationWeather = ref.read(
+      getCurrentLocationWeatherUseCaseProvider,
+    );
     final result = await getCurrentLocationWeather(NoParams());
 
     result.fold(
@@ -58,9 +59,14 @@ class WeatherNotifier extends StateNotifier<WeatherState> {
         errorMessage: failure.message,
       ),
       (weather) {
-        // After getting location weather, we should fetch forecast for that city
         loadWeather(weather.cityName);
       },
     );
   }
 }
+
+final weatherNotifierProvider = NotifierProvider<WeatherNotifier, WeatherState>(
+  () {
+    return WeatherNotifier();
+  },
+);

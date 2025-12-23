@@ -1,0 +1,15 @@
+Analyzing weather_app...                                        
+
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failures.dart:12:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failures.dart:16:9 - use_super_parameters
+   info - The type parameter name 'Type' matches a visible type name - lib\core\usecases\usecase.dart:4:24 - avoid_types_as_parameter_names
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\data\repositories\weather_repository_impl.dart:46:9 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\home_page.dart:99:52 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\presentation\pages\settings_page.dart:90:21 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\widgets\glass_container.dart:29:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\widgets\glass_container.dart:32:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\widgets\glass_container.dart:39:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\widgets\glass_container.dart:40:30 - deprecated_member_use
+warning - Unused import: 'package:weather_app/domain/entities/weather.dart' - test\data\models\weather_model_test.dart:4:8 - unused_import
+warning - The value of the local variable 'tWeatherModel' isn't used - test\data\models\weather_model_test.dart:7:9 - unused_local_variable
+
